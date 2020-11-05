@@ -1,0 +1,168 @@
+<mvc:View controllerName="com.yash.CovidHealthCheklist.controller.covidHealthCheckList" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>Employee Health checklist for Covid 19 }">
+					<content>
+						<l:VerticalLayout id="containerLayout" width="100%">
+							<l:BlockLayout id="BlockLayout">
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell >
+										<form:SimpleForm editable="true">
+											<Label text="Employee Id"/>
+											<Input id="employeeId" required="true"/>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+									<l:BlockLayoutCell>
+										<form:SimpleForm editable="true">
+											<Label text="Name"/>
+											<Input id="employeeName"/>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell >
+										<form:SimpleForm editable="true">
+											<Label text="Email Address"/>
+											<Input id="employeeEmail" required="true"/>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+									<l:BlockLayoutCell>
+										<form:SimpleForm editable="true">
+											<Label text="Designation"/>
+											<Input id="employeeDesignation"/>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label text="1. How old you are?"/>
+												<Input type="Integer"/>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout><Label text="2. Please select your gender"/>
+												<RadioButtonGroup>
+													<buttons>
+														<RadioButton text="Male"/>
+														<RadioButton text="Female"/>
+														<RadioButton text="Others"/>
+													</buttons>
+												</RadioButtonGroup>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label width="100%" text="3. Please let us know your current body temperature in degree Fahrenheit (Normal body temperature is98.60F)"/>
+												<RadioButtonGroup>
+													<buttons>
+														<RadioButton text="Normal (960F-98.60F)"/>
+														<RadioButton text="Fever (98.60F-1020F)"/>
+														<RadioButton text="High Fever(>1020F)"/>
+														<RadioButton text="Don’t know"/>
+													</buttons>
+												</RadioButtonGroup>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label text="4. Are you experiencing any of the symptoms below (mark all those applicable) "/>
+												<CheckBox width="100%" text="Dry Cough"/>
+												<CheckBox width="100%" text="Loss or diminished sense of small"/>
+												<CheckBox width="100%" text="Sore Throat "/>
+												<CheckBox width="100%" text="Weakness"/>
+												<CheckBox width="100%" text="Change in Appetite"/>
+												<CheckBox width="100%" text="None of these"/>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label text="5. Additionally, please verify if you are experiencing any of the symptoms below (mark all those applicable) "/>
+												<CheckBox text="Moderate to Severe Cough "/>
+												<CheckBox text="Feeling Breathless"/>
+												<CheckBox text="Difficulty in breathing"/>
+												<CheckBox text="Drowsiness"/>
+												<CheckBox text="Persistent pain and pressure in chest"/>
+												<CheckBox text="Severe Weakness "/>
+												<CheckBox text="None of these"/>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label text="6. We would like to know about your smoking history"/>
+												<RadioButtonGroup>
+													<buttons>
+														<RadioButton text="Current Smoker"/>
+														<RadioButton text="Previous Smoker (before last 6 months)"/>
+														<RadioButton text="Never Smoke"/>
+													</buttons>
+												</RadioButtonGroup>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label text="7. Please select your travel and exposure details"/>
+												<CheckBox text="No travel History"/>
+												<CheckBox text="No contact with anyone with symptoms"/>
+												<CheckBox text="History of travel or meeting in affected geographical area in last 14 days"/>
+												<CheckBox text="Close contact with a person with fever and Cough in last 14 days"/>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+								<l:BlockLayoutRow>
+									<l:BlockLayoutCell width="100%">
+										<form:SimpleForm editable="true">
+											<l:VerticalLayout>
+												<Label text="8. Do you have a history of any of these conditions (mark all those applicable)"/>
+												<CheckBox text="Diabetes"/>
+												<CheckBox text="High Blood pressure"/>
+												<CheckBox text="Heart Disease"/>
+												<CheckBox text="kidney Disease "/>
+												<CheckBox text="Lung diseases (Asthma, COPD, TB etc..)"/>
+												<CheckBox text="Stroke"/>
+												<CheckBox text="Reduced Immunity"/>
+												<CheckBox text="None of these"/>
+											</l:VerticalLayout>
+										</form:SimpleForm>
+									</l:BlockLayoutCell>
+								</l:BlockLayoutRow>
+							</l:BlockLayout>
+						</l:VerticalLayout>
+					</content>
+					<OverflowToolbar id="idFooter">
+						<ToolbarSpacer/>
+						<Button text="Submit" press="buttonPress" width="280px"/>
+					</OverflowToolbar>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
